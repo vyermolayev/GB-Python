@@ -9,7 +9,8 @@ if rangeMax < rangeMin:
     rangeMin, rangeMax = rangeMax, rangeMin
     
 for idx in range(len(inList)):
-    if inList[idx] >= rangeMin and inList[idx] <= rangeMax:
+    if rangeMax >= inList[idx] >= rangeMin :
         resList.append(idx)
 
-print(resList)        
+print(resList)
+print([idx for idx in range(len(inList)) if rangeMax >= inList[idx] >= rangeMin])
